@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+ul i{
+  font-size: xx-large;
+}
+nav{
+  width: 100%;
+}
+/*styling of main section*/
+main{
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+section{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.main-img{
+  height: 35em;
+  width: 40em;
+}
+.main-img img{
+  height: 100%;
+  width: 100%;
+  border: 2px grey solid;
+  border-radius: 50px;
+}
+.other-imgs{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 10px;
+}
+.other-imgs img{
+  height: 4em;
+  width: 4em;
+  border: 2px grey solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn{
+  margin-left: 5em;
+  margin-right: 5em;
+}
+/*For moblie*/
+@media (max-width:680px) {
+  .main-img{
+    height: 20em;
+    width: 25em;
+  }
+  .other-imgs img{
+    height: 3em;
+    width: 3em;
+  }
+  .btn{
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
