@@ -1,3 +1,4 @@
+
 let main = document.querySelector("main");
 let sections = [
   // Define the sections with their images
@@ -65,16 +66,22 @@ function changeImage(sectionIndex, direction) {
 
   // Get the new image source based on the index
   let newImgSrc;
-  if (currentIndexes[sectionIndex] === 0) {
-    newImgSrc = `gallery-images/${section.mainImg}.png`;
-  } else if (currentIndexes[sectionIndex] === 1) {
-    newImgSrc = `gallery-images/${section.firstImg}.png`;
-  } else if (currentIndexes[sectionIndex] === 2) {
-    newImgSrc = `gallery-images/${section.secondImg}.png`;
-  } else if (currentIndexes[sectionIndex] === 3) {
-    newImgSrc = `gallery-images/${section.thirdImg}.png`;
-  } else if (currentIndexes[sectionIndex] === 4) {
-    newImgSrc = `gallery-images/${section.forthImg}.png`;
+  switch (currentIndexes[sectionIndex]) {
+    case 0:
+      newImgSrc = `gallery-images/${section.mainImg}.png`;
+      break;
+    case 1:
+      newImgSrc = `gallery-images/${section.firstImg}.png`;
+      break;
+    case 2:
+      newImgSrc = `gallery-images/${section.secondImg}.png`;
+      break;
+    case 3:
+      newImgSrc = `gallery-images/${section.thirdImg}.png`;
+      break;
+    case 4:
+      newImgSrc = `gallery-images/${section.forthImg}.png`;
+      break;
   }
 
   // Change the main image based on the function specified
