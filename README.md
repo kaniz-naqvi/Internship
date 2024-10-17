@@ -10,16 +10,15 @@
                 Built using <strong>Bootstrap</strong>, the site includes a sleek, mobile-friendly navigation bar that collapses into a menu on smaller devices, 
                 with links to a blog, about page, and social media profiles.
             </p>
-
             <h3>Key Features:</h3>
-            <ul class="list-group">
-                <li class="list-group-item">
+            <ul>
+                <li">
                     <strong>Dynamic Image Gallery:</strong> Users can browse through different images in each section using clickable thumbnails and arrow buttons.
                 </li>
-                <li class="list-group-item">
+                <li>
                     <strong>Responsive Design:</strong> The layout adjusts seamlessly to different screen sizes, ensuring an optimal experience on both desktop and mobile devices.
                 </li>
-                <li class="list-group-item">
+                <li>
                     <strong>Bootstrap Components:</strong> The site leverages Bootstrap's navbar, buttons, and grid system for a polished, professional look across all devices.
                 </li>
             </ul>
