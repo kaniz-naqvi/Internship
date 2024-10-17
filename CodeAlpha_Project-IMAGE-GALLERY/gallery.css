@@ -21,6 +21,7 @@ main{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
 }
 section{
     height: auto;
@@ -60,15 +61,21 @@ section{
 /*For moblie*/
 @media (max-width:680px) {
   .main-img{
-    height: 20em;
-    width: 25em;
+    height: 15em;
+    width: 15em;
   }
   .other-imgs img{
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
   }
   .btn{
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  .other-imgs{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 3px;
   }
 }
