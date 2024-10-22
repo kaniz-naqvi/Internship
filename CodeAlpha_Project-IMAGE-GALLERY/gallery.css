@@ -17,39 +17,41 @@ nav{
 main{
   padding: 20px;
   width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+  height:100%;
+  display:block;
 }
 section{
-    height: auto;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 10px;
 }
 .main-img{
-  height: 35em;
-  width: 40em;
+  width: 50%;
+  height: 80%;
 }
 .main-img img{
   height: 100%;
   width: 100%;
   border: 2px grey solid;
   border-radius: 50px;
+  background-size: cover;
 }
 .other-imgs{
+  height: 10%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content:center;
   gap: 10px;
 }
 .other-imgs img{
-  height: 4em;
-  width: 4em;
+  height: 100%;
+  background-size: cover;
+  width: 7%;
   border: 2px grey solid;
   border-radius: 10px;
   cursor: pointer;
@@ -58,24 +60,25 @@ section{
   margin-left: 5em;
   margin-right: 5em;
 }
-/*For moblie*/
-@media (max-width:680px) {
+.other-imgs img.active {
+  border: 2px solid blue;
+  opacity: 0.7;
+}
+
+@media (max-width:800px) {
   .main-img{
-    height: 15em;
-    width: 15em;
-  }
-  .other-imgs img{
-    height: 2em;
-    width: 2em;
+    width: 90%;
+    height: 60%;
   }
   .btn{
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    display: none;
   }
   .other-imgs{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    gap: 3px;
+    height: 20%;
+  }
+  .other-imgs img{
+    width: 15%;
+    height: 60%;
+    background-size: cover;
   }
 }

@@ -1,7 +1,5 @@
-
 let main = document.querySelector("main");
 let sections = [
-  // Define the sections with their images
   {
     heading: "Flowers 🌸",
     mainImg: "image1",
@@ -40,15 +38,15 @@ sections.forEach((section, index) => {
     <section>
       <h1>${section.heading}</h1>
       <div class="main-img">
-        <img src="gallery-images/${section.mainImg}.png" class="${section.class}" alt="${section.heading}">
+        <img src="gallery-images/${section.mainImg}.png" class="${section.class}" alt="${section.heading}" onclick="showFullscreen('${section.mainImg}')">
       </div>
       <div class="other-imgs">
         <button class="btn btn-primary left-arrow" onclick="changeImage(${index}, -1)"><i class="ri-arrow-left-wide-line"></i></button>
-        <img src="gallery-images/${section.mainImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.mainImg}.png')">
-        <img src="gallery-images/${section.firstImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.firstImg}.png')">
-        <img src="gallery-images/${section.secondImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.secondImg}.png')">
-        <img src="gallery-images/${section.thirdImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.thirdImg}.png')">
-        <img src="gallery-images/${section.forthImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.forthImg}.png')">     
+        <img src="gallery-images/${section.mainImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.mainImg}.png', ${index})">
+        <img src="gallery-images/${section.firstImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.firstImg}.png', ${index})">
+        <img src="gallery-images/${section.secondImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.secondImg}.png', ${index})">
+        <img src="gallery-images/${section.thirdImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.thirdImg}.png', ${index})">
+        <img src="gallery-images/${section.forthImg}.png" alt="${section.heading}" onclick="${section.function}('gallery-images/${section.forthImg}.png', ${index})">     
         <button class="btn btn-primary right-arrow" onclick="changeImage(${index}, 1)"><i class="ri-arrow-right-wide-line"></i></button>
       </div>
     </section>`;
@@ -56,6 +54,19 @@ sections.forEach((section, index) => {
 
 // Initialize current indexes for each section
 let currentIndexes = sections.map(() => 0); // start with the first image (index 0)
+
+// Set the initial active class on the main images
+setActiveImages();
+
+function setActiveImages() {
+  sections.forEach((section, index) => {
+    const currentImgSrc = `gallery-images/${section.mainImg}.png`;
+    const activeImg = document.querySelector(`section:nth-of-type(${index + 1}) .other-imgs img[onclick*="${currentImgSrc}"]`);
+    if (activeImg) {
+      activeImg.classList.add("active");
+    }
+})
+}
 
 function changeImage(sectionIndex, direction) {
   // Get the current section
@@ -86,26 +97,40 @@ function changeImage(sectionIndex, direction) {
 
   // Change the main image based on the function specified
   if (section.function === "changeFlowerImg") {
-    changeFlowerImg(newImgSrc);
+    changeFlowerImg(newImgSrc, sectionIndex);
   } else if (section.function === "changeForestImg") {
-    changeForestImg(newImgSrc);
+    changeForestImg(newImgSrc, sectionIndex);
   } else if (section.function === "changeSkyImg") {
-    changeSkyImg(newImgSrc);
+    changeSkyImg(newImgSrc, sectionIndex);
   }
 }
 
 // Functions to change the main image for each section
-let currentFlowerImg = document.querySelector(".mainFlowerImg");
-function changeFlowerImg(imgsrc) {
-  currentFlowerImg.setAttribute('src', imgsrc);
+function changeFlowerImg(imgsrc, sectionIndex) {
+  updateImage(imgsrc, sectionIndex, ".mainFlowerImg");
 }
 
-let currentForestImg = document.querySelector(".mainForestImg");
-function changeForestImg(imgsrc) {
-  currentForestImg.setAttribute('src', imgsrc);
+function changeForestImg(imgsrc, sectionIndex) {
+  updateImage(imgsrc, sectionIndex, ".mainForestImg");
 }
 
-let currentSkyImg = document.querySelector(".mainSkyImg");
-function changeSkyImg(imgsrc) {
-  currentSkyImg.setAttribute('src', imgsrc);
+function changeSkyImg(imgsrc, sectionIndex) {
+  updateImage(imgsrc, sectionIndex, ".mainSkyImg");
+}
+
+// General function to update image and manage active class
+function updateImage(imgsrc, sectionIndex, mainClass) {
+  removeActiveClass(sectionIndex);
+  const currentMainImg = document.querySelector(mainClass);
+  currentMainImg.setAttribute('src', imgsrc);
+  const activeImg = document.querySelector(`section:nth-of-type(${sectionIndex + 1}) .other-imgs img[onclick*="${imgsrc}"]`);
+  if (activeImg) {
+    activeImg.classList.add("active");
+  }
+}
+
+// Function to remove the active class from images in the current section
+function removeActiveClass(sectionIndex) {
+  const images = document.querySelectorAll(`section:nth-of-type(${sectionIndex + 1}) .other-imgs img`);
+  images.forEach(img => img.classList.remove("active"));
 }
