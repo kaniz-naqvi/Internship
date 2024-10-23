@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <main>
+        <div class="calculator">
+            <header>
+                <div class="my-menu">
+                <div class="menu">
+                    <i class="ri-menu-2-line menuIcon"></i>
+                </div>
+                <div class="hamburger">
+                    <p class="dark-mode">Darkmode</p>
+                    <p class="light-mode">Lightmode</p>
+                </div>
+                <div class="cross">×</div>
+            </div>
+                <div class="heading"><h3>Calculator</h3></div>
+            </header>
+            <div class="input">
+                <input type="text" placeholder="0" id="input-value">
+            </div>
+            <div class="operator">
+                <div class="btns">
+                    <button class="blue" id="C">C</button>
+                    <button class="blue operators" id="*100/">%</button>
+                    <button class="blue" id="del"><i class="ri-delete-back-2-line"></i></button>
+                    <button class="blue operators" id="/">÷</button>
+                </div>
+                <div class="btns">
+                    <button class="num" id="7">7</button>
+                    <button class="num" id="8">8</button>
+                    <button class="num" id="9">9</button>
+                    <button class="blue operators" id="*">×</button>
+                </div>
+                <div class="btns">
+                    <button class="num" id="4">4</button>
+                    <button class="num" id="5">5</button>
+                    <button class="num" id="6">6</button>
+                    <button class="blue operators" id="-">-</button>
+                </div>
+                <div class="btns">
+                    <button class="num" id="1">1</button>
+                    <button class="num" id="2">2</button>
+                    <button class="num" id="3">3</button>
+                    <button class="blue operators" id="+">+</button>
+                </div>
+                <div class="btns">
+                    <button class="num" id="00">00</button>
+                    <button class="num" id="0">0</button>
+                    <button class="num" id=".">.</button>
+                    <button class="blue" id="result">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="cal.js"></script>
+</body>
+</html>
