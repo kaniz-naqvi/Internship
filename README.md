@@ -25,5 +25,5 @@
       </ul>
     </details>
   </li>
-  <li>See it in action <a href="https://kaniz-naqvi.github.io/CodeAlpha-Internship-Projects/CodeAlpha_Project-IMAGE-GALLERY/gallery.html" target="_blank">here</a></li>
+  <li>See it in action <a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha_Project-IMAGE-GALLERY/gallery.html" target="_blank">here</a></li>
 </ul>
