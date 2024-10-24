@@ -36,40 +36,12 @@ header{
     align-items: center;
     justify-content: flex-start;
 }
-.hamburger {
-    margin: 5px;
-    padding: 10px;
-    background-color:#00FFFF55 ;
-    font-size: 14px;
-    border-radius: 4px;
-    width:100px;
-    font-family: sans-serif;
-    display: none;
-    cursor: pointer;
-    height:60px;
-}
-
-.hamburger p:hover {
-    border-bottom: 1.5px solid grey;
-}
-
-
-.cross{
-    text-align: center;
-    height: 30px;
-    width: 30px;
-    background-color: #6d6c6ca8;
-    border-radius: 50%;
-    display: none;
-    cursor: pointer;
-}
-.my-menu{
-    height: 40px;
-    display: flex;
-    font-size: x-large;
+.change-theme{
     width: 40%;
+    font-size: x-large;
     cursor: pointer;
 }
+
 .heading{
     width: 50%;
     color: aqua;
@@ -140,6 +112,7 @@ button:focus {
 .btn-dark{
     color: #d1cfcf;
 }
+
 @media (max-width:900px) {
     .calculator{
         height: 100%;

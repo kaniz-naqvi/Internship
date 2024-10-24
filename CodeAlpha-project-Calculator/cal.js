@@ -1,48 +1,25 @@
-let menuIcon = document.querySelector(".menuIcon");
-let cross = document.querySelector(".cross");
-let hamBurger = document.querySelector(".hamburger");
 let body = document.querySelector("body");
 let allBtns = document.querySelectorAll("button");
 let display = document.getElementById("input-value");
 let result = document.querySelector(".result");
+let toggleIcon= document.querySelector(".ri-toggle-line")
+const inputField = document.getElementById("input-value");
 
-// Show hamburger menu and cross icon when menu is clicked
-menuIcon.addEventListener("click", () => {
-    menuIcon.style.display = "none";  // Hide menu icon
-    cross.style.display = "block";     // Show cross icon
-    hamBurger.style.display = "block"; // Show hamburger menu
+// Prevent keyboard from opening on mobile by blurring input on focus
+inputField.addEventListener("focus", function() {
+    this.blur();
 });
 
-// Hide hamburger menu and show menu icon when cross is clicked
-cross.addEventListener("click", () => {
-    cross.style.display = "none";      // Hide cross icon
-    hamBurger.style.display = "none";  // Hide hamburger menu
-    menuIcon.style.display = "block";  // Show menu icon again
-});
 
 // Toggle dark mode functionality
-let darkmode = document.querySelector(".dark-mode");
-let numericBtns = document.querySelectorAll(".num");
-let lightmode = document.querySelector(".light-mode");
-
-// Dark mode activation
-darkmode.addEventListener("click", () => {
-    body.classList.toggle("dark"); // Toggle dark mode for body
-    hamBurger.classList.toggle("dark"); // Toggle dark mode for hamburger menu
-    display.classList.toggle("dark"); // Toggle dark mode for display
-    numericBtns.forEach(btn => {
-        btn.classList.toggle("btn-dark"); // Toggle dark mode for each numeric button
-    });
+toggleIcon.addEventListener("click", () => {
+    body.classList.toggle("dark"); 
+    display.classList.toggle("btn-dark"); 
+    toggleIcon.style.transform = "rotate(360deg)";
+    toggleIcon.style.transition = "transform 0.5s";
+    allBtns.forEach(btn => btn.classList.toggle("btn-dark"));
 });
 
-// Light mode activation
-lightmode.addEventListener("click", () => {
-    body.classList.remove("dark"); // Remove dark mode from body
-    hamBurger.classList.remove("dark"); // Remove dark mode from hamburger menu
-    numericBtns.forEach(btn => {
-        btn.classList.remove("btn-dark"); // Remove dark mode from each numeric button
-    });
-});
 
 // Calculator Functionality
 let expression = ""; // Initialize an empty expression for calculations
@@ -93,7 +70,7 @@ allBtns.forEach(btn => {
             
             // Evaluate the current expression and show the result
             if (expression.length >= 3) {
-                try {
+                
                     if (expression.includes("*100/") && expression.length >= 7) {
                         result.innerHTML = eval(expression); // Show the result if valid
                     } else {
@@ -101,10 +78,11 @@ allBtns.forEach(btn => {
                         if (isValidExpression(expression)) {
                             result.innerHTML = eval(expression); // Evaluate and show the result
                         }
+                        else{
+                            result.innerHTML ="";
+                        }
                     }
-                } catch (error) {
-                    result.innerHTML = "Error"; // Show error if evaluation fails
-                }
+                
             }
         }
     });
