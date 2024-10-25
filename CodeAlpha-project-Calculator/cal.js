@@ -2,95 +2,92 @@ let body = document.querySelector("body");
 let allBtns = document.querySelectorAll("button");
 let display = document.getElementById("input-value");
 let result = document.querySelector(".result");
-let toggleIcon= document.querySelector(".ri-toggle-line")
+let toggleIcon = document.querySelector(".ri-toggle-line");
 const inputField = document.getElementById("input-value");
+let numaricNumbers = document.querySelectorAll(".num");
 
-// Prevent keyboard from opening on mobile by blurring input on focus
+// Prevent keyboard from opening on mobile
 inputField.addEventListener("focus", function() {
     this.blur();
 });
 
-
-// Toggle dark mode functionality
+// Toggle light and dark themes
 toggleIcon.addEventListener("click", () => {
-    body.classList.toggle("dark"); 
-    display.classList.toggle("btn-dark"); 
-    toggleIcon.style.transform = "rotate(360deg)";
-    toggleIcon.style.transition = "transform 0.5s";
-    allBtns.forEach(btn => btn.classList.toggle("btn-dark"));
+    body.classList.toggle("dark");
+    display.classList.toggle("btn-dark");
+    toggleIcon.classList.toggle("rotate");
+    toggleIcon.classList.toggle("theme");
+    toggleIcon.classList.toggle("ri-toggle-fill");
+    toggleIcon.classList.toggle("ri-toggle-line");
+    numaricNumbers.forEach(btn => btn.classList.toggle("btn-dark"));
 });
 
-
 // Calculator Functionality
-let expression = ""; // Initialize an empty expression for calculations
-let lastResultDisplayed = false; // Track if the last action was a result display
+let expression = "";
+let lastResultDisplayed = false;
 
 // Add event listener to all buttons
 allBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        let buttonId = btn.getAttribute("id");        
-        
+        let buttonId = btn.getAttribute("id");
+
         // Clear all inputs and reset
         if (buttonId === "C") {
-            expression = "";
+            expression = ""; 
             display.value = ""; 
             result.innerHTML = ""; 
-            lastResultDisplayed = false; // Reset last result state
+            lastResultDisplayed = false;
         } 
-        // Delete last character from the expression
+        // Delete last character from expression
         else if (buttonId === "del") {
             expression = expression.slice(0, -1); 
-            display.value = display.value.slice(0,-1);  
+            display.value = display.value.slice(0, -1);  
         } 
-        // Calculate and display the result
+        // Calculate and display result
         else if (buttonId === "result") {
             try {
                 let evalResult = eval(expression);
-                display.value = evalResult; // Display the calculated result
-                result.innerHTML = ""; // Clear result display
-                expression = ""; // Reset expression after calculation
-                lastResultDisplayed = true; // Mark that result was displayed
+                display.value = evalResult;
+                result.innerHTML = ""; 
+                expression = ""; 
+                lastResultDisplayed = true; 
             } catch (error) {
                 display.value = "Error"; 
                 result.innerHTML = ""; 
-                expression = ""; // Reset expression on error
+                expression = ""; 
+                lastResultDisplayed = true;
             }
         } 
         // Handle input for numbers and operators
         else {
-            // Clear result if it was displayed previously
             if (lastResultDisplayed) {
-                display.value = ""; // Clear input display
-                expression = ""; // Clear expression
-                lastResultDisplayed = false; // Reset last result state
+                display.value = ""; 
+                expression = ""; 
+                lastResultDisplayed = false; 
             }
+            expression += buttonId; 
+            display.value += btn.innerHTML; 
             
-            expression += buttonId; // Append button ID to the expression
-            display.value += btn.innerHTML; // Update the display with the input value
-            
-            // Evaluate the current expression and show the result
+            // Evaluate expression and show result
             if (expression.length >= 3) {
-                
+                const validExpressionPattern = /(\d+[\+\-\*\/]\d+)/;
+
+                if (validExpressionPattern.test(expression)) {
                     if (expression.includes("*100/") && expression.length >= 7) {
-                        result.innerHTML = eval(expression); // Show the result if valid
-                    } else {
-                        // Check if expression is valid before evaluation
-                        if (isValidExpression(expression)) {
-                            result.innerHTML = eval(expression); // Evaluate and show the result
-                        }
-                        else{
-                            result.innerHTML ="";
-                        }
+                        result.innerHTML = eval(expression);
+                    } else if (isValidExpression(expression)) {
+                        result.innerHTML = eval(expression); 
                     }
-                
+                } else {
+                    result.innerHTML = ""; 
+                }
             }
         }
     });
 });
 
-// Helper function to validate expression
+// Validate expression
 function isValidExpression(expr) {
-    // Add conditions to check for valid characters, balance of operators, etc.
-    const validChars = /^[0-9+\-*/().]*$/; // Allow only digits and operators
-    return validChars.test(expr); // Test against valid characters
+    const validChars = /^[0-9+\-*/().]*$/; 
+    return validChars.test(expr);
 }

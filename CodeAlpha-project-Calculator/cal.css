@@ -1,26 +1,35 @@
-*{
+/* Reset margin and padding, set box-sizing */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
+
+/* Full height and width for HTML and body */
 html,
-body{
+body {
     height: 100%;
     width: 100%;
-    font-family: "lora";
+    font-family: "Lora";
 }
-.dark{
+
+/* Dark mode styling */
+.dark {
     color: #d1cfcf;
     background-color: rgb(48, 46, 46);
 }
-main{
+
+/* Center main content */
+main {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.calculator{
+
+/* Calculator container styling */
+.calculator {
     border: 2px solid black;
     height: 80%;
     width: 25%;
@@ -29,41 +38,75 @@ main{
     justify-content: center;
     flex-direction: column;
 }
-header{
+
+/* Header styling */
+header {
     width: 100%;
     padding: 4px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.change-theme{
+
+/* Toggle theme button styling */
+.change-theme {
     width: 40%;
     font-size: x-large;
     cursor: pointer;
 }
 
-.heading{
+/* Light theme toggle icon styling */
+.theme {
+    color: #f58d06;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffd700;
+    transition: color 0.3s ease, text-shadow 0.9s ease; 
+}
+.theme:hover {
+    color: #ffffffb2; /* Slightly brighter yellow */
+    text-shadow: 0 0 5px #f58d06, 0 0 10px #f58d06, 0 0 15px #f58d06, 0 0 20px #f58d06; /* Bright white shadow */
+}
+
+/* Dark theme toggle icon styling */
+.rotate {
+    color: #191970;
+    text-shadow: 0 0 5px #87cefa, 0 0 10px #87cefa, 0 0 15px #87cefa, 0 0 20px #87cefa;
+    transition: color 0.3s ease, text-shadow 0.9s ease; 
+}
+.rotate:hover {
+    color: #025672; /* New color on hover */
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 15px #00bfff, 0 0 20px #00bfff; /* New shadow on hover */
+}
+
+
+/* Heading styling */
+.heading {
     width: 50%;
     color: aqua;
     font-weight: 20;
 }
-.heading h3{
+.heading h3 {
     display: inline-block;
     border-bottom: 2px solid aqua;
 }
-.input{
+
+/* Input container styling */
+.input {
     padding: 4px;
     height: 35%;
     width: 100%;
 }
-.input p{
+
+/* Result display styling */
+.input p {
     height: 20%;
     width: 100%;
     color: grey;
     text-align: right;
     font-size: 30px;
 }
-.input input{
+
+/* Calculator input field styling */
+.input input {
     border: none;
     outline: none;
     width: 100%;
@@ -73,7 +116,9 @@ header{
     text-align: right;
     background-color: transparent;
 }
-.operator{
+
+/* Operators container styling */
+.operator {
     padding-top: 10%;
     padding-bottom: 10%;
     height: 80%;
@@ -84,7 +129,9 @@ header{
     justify-content: space-between;
     flex-direction: column;
 }
-.btns{ 
+
+/* Button row styling */
+.btns {
     height: 15%;
     width: 100%;
     margin-top: 3%;
@@ -92,7 +139,9 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-button{
+
+/* General button styling */
+button {
     cursor: pointer;
     height: 95%;
     width: 23%;
@@ -101,20 +150,26 @@ button{
     outline: none;
     font-size: 30px;
 }
+
+/* Focus effect for button */
 button:focus {
     outline: none;
-    box-shadow: 0 0 5px 2px rgba(0, 255, 255, 0.2); 
+    box-shadow: 0 0 5px 2px rgba(0, 255, 255, 0.2);
 }
 
-.blue{
+/* Blue buttons styling */
+.blue {
     color: aqua;
 }
-.btn-dark{
+
+/* Dark mode button styling */
+.btn-dark {
     color: #d1cfcf;
 }
 
-@media (max-width:900px) {
-    .calculator{
+/* Responsive styling for smaller screens */
+@media (max-width: 900px) {
+    .calculator {
         height: 100%;
         width: 100%;
         border: none;
