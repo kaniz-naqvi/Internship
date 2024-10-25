@@ -65,4 +65,4 @@
   </li>
   <li>See it in action <a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha-project-Calculator/cal.html" target="_blank">here</a></li>
 </ul>
-<a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha_Project-portfoli/portfolio.html"></a>
+<a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha_Project-portfoli/portfolio.html">here</a>
