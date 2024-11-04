@@ -30,8 +30,8 @@ section{
     margin-bottom: 10px;
 }
 .main-img{
-  width: 50%;
-  height: 80%;
+  width: 25rem;
+  aspect-ratio: 1;
 }
 .main-img img{
   height: 100%;

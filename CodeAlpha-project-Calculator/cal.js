@@ -46,15 +46,22 @@ allBtns.forEach(btn => {
         // Calculate and display result
         else if (buttonId === "result") {
             try {
-                let evalResult = eval(expression);
-                display.value = evalResult;
-                result.innerHTML = ""; 
-                expression = ""; 
-                lastResultDisplayed = true; 
+                if (isValidExpression(expression)) {
+                    let evalResult = eval(expression);
+                    display.value = evalResult;
+                    result.innerHTML = "";
+                    expression = "";
+                    lastResultDisplayed = true;
+                } else {
+                    display.value = "Invalid Input";
+                    result.innerHTML = "";
+                    expression = "";
+                    lastResultDisplayed = true;
+                }
             } catch (error) {
-                display.value = "Error"; 
-                result.innerHTML = ""; 
-                expression = ""; 
+                display.value = "Error";
+                result.innerHTML = "";
+                expression = "";
                 lastResultDisplayed = true;
             }
         } 
@@ -88,6 +95,8 @@ allBtns.forEach(btn => {
 
 // Validate expression
 function isValidExpression(expr) {
-    const validChars = /^[0-9+\-*/().]*$/; 
-    return validChars.test(expr);
+    // Pattern checks if the expression has only digits, operators, or parentheses
+    const validChars = /^[0-9+\-*/()]*$/;
+    const validSyntax = /^(\d+(\.\d+)?)([+\-*/](\d+(\.\d+)?))*$/;
+    return validChars.test(expr) && validSyntax.test(expr);
 }

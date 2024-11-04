@@ -1,11 +1,8 @@
-/* Reset margin and padding, set box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Full height and width for HTML and body */
 html,
 body {
     height: 100%;
@@ -63,7 +60,7 @@ header {
 }
 .theme:hover {
     color: #ffffffb2; /* Slightly brighter yellow */
-    text-shadow: 0 0 5px #f58d06, 0 0 10px #f58d06, 0 0 15px #f58d06, 0 0 20px #f58d06; /* Bright white shadow */
+    text-shadow: 0 0 5px #f58d06, 0 0 10px #f58d06, 0 0 15px #f58d06, 0 0 20px #f58d06;
 }
 
 /* Dark theme toggle icon styling */
