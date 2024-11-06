@@ -1,28 +1,34 @@
 <h1>1 Month Internship Project at CodeAlpha</h1>
 <img src="https://media.licdn.com/dms/image/v2/C4D0BAQFVBPbc6-yxoA/company-logo_200_200/company-logo_200_200/0/1677167041761?e=1736985600&v=beta&t=y4_AqlP2NpnjELjCuPYgzKfnVrKSgUHHZuzPqMKUQ5c" alt="CodeAlpha logo" />
 <hr />
-<h2>Image Gallery</h2>
+<h2>Nature Lovers Image Gallery</h2>
 <ul>
   <li>
     <details>
       <summary>Project Details</summary>
       <p>
-        The <strong>NatureLovers</strong> website is a fully responsive, interactive nature gallery featuring collections of <strong>flowers</strong>, <strong>forests</strong>, and <strong>skies</strong>.
-        Built using <strong>Bootstrap</strong>, the site includes a sleek, mobile-friendly navigation bar that collapses into a menu on smaller devices,
-        with links to a blog, about page, and social media profiles.
+        The <strong>Nature Lovers Image Gallery</strong> is a visually immersive gallery that showcases the beauty of nature through three main categories: 
+        <strong>Flowers</strong>, <strong>Forests</strong>, and <strong>The Sky</strong>. The gallery provides an interactive user experience, where users can explore a collection of stunning images.
       </p>
       <h3>Key Features:</h3>
       <ul>
         <li>
-          <strong>Dynamic Image Gallery:</strong> Users can browse through different images in each section using clickable thumbnails and arrow buttons.
+          <strong>Interactive Image Selection:</strong> Click on any image to view it in a larger format, with the ability to navigate between images in each category using the left and right arrows.
         </li>
         <li>
-          <strong>Responsive Design:</strong> The layout adjusts seamlessly to different screen sizes, ensuring an optimal experience on both desktop and mobile devices.
+          <strong>Fullscreen Mode:</strong> Click on any image to view it in fullscreen mode for a more immersive experience.
         </li>
         <li>
-          <strong>Bootstrap Components:</strong> The site leverages Bootstrap's navbar, buttons, and grid system for a polished, professional look across all devices.
+          <strong>Dynamic Image Changes:</strong> Users can change the main image of each category by clicking on the thumbnails, allowing for a dynamic and engaging browsing experience.
+        </li>
+        <li>
+          <strong>Responsive Design:</strong> The gallery adapts to different screen sizes, ensuring an optimal viewing experience on both desktop and mobile devices.
         </li>
       </ul>
+      <h3>Usage:</h3>
+      <p>
+        Users can explore the gallery by navigating through different categories: Flowers, Forests, and Sky. Each category includes a main image that can be changed by clicking on thumbnails, and all images can be viewed in fullscreen mode. The responsive design ensures that the gallery works seamlessly across all devices.
+      </p>
     </details>
   </li>
   <li>See it in action <a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha_Project-IMAGE-GALLERY/gallery.html" target="_blank">here</a></li>
