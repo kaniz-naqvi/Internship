@@ -71,4 +71,33 @@
   </li>
   <li>See it in action <a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha-project-Calculator/cal.html" target="_blank">here</a></li>
 </ul>
-<a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha-project-portfolio/portfolio.html">here</a>
+<div>
+    <ol>
+        <h2>My Portfolio Website</h2>
+        <ul>
+            <li>
+                <details>
+                    <summary><u>Project Details</u></summary>
+                    <p>
+                        The <strong>Portfolio Website</strong> serves as a professional online presence where I showcase my skills, projects, and achievements. Built with <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>Bootstrap</strong>, this portfolio represents my journey as a developer and includes a detailed collection of my work during the internship at <strong><a href="https://www.linkedin.com/company/codealpha/" target="_blank">codeAlpha</a></strong>.
+                    </p>
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li><strong>Responsive Design</strong>: The website is fully responsive, ensuring a seamless experience across desktops, tablets, and mobile devices.</li>
+                        <li><strong>Project Display</strong>: Each project includes detailed information, such as project names, live links, code repositories, and descriptions of the functionality and key features.</li>
+                        <li><strong>Navigation</strong>: Clear and intuitive navigation to access the blog, about me section, and my social media links.</li>
+                        <li><strong>Interactive Elements</strong>: Hover effects and smooth scrolling for a modern user experience.</li>
+                        <li><strong>Social Links</strong>: Direct access to my LinkedIn and GitHub profiles, allowing visitors to explore my professional network and repositories.</li>
+                    </ul>
+                    <h3>Usage:</h3>
+                    <p>
+                        Visitors can explore my portfolio to learn more about my skills, the projects I have worked on, and the technologies I have used. The website also includes a link to my blog, where I share insights about my learning process and the challenges I face while growing as a web developer.
+                    </p>
+                </details>
+            </li>
+            <li><a href="portfolio_link_here" target="_blank">Live preview</a></li>
+            <li><a href="https://github.com/kaniz-naqvi/portfolio-repo-link" target="_blank">Go to Code</a></li>
+        </ul>
+    </ol>
+</div>
+
