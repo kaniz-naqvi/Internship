@@ -94,7 +94,7 @@
                     </p>
                 </details>
             </li>
-            <li>See it in action<a href="portfolio_link_here" target="_blank"> here.</a></li>
+            <li>See it in action<a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha_Project_portfolio/portfolio.html" target="_blank"> here.</a></li>
         </ul>
 </div>
 
