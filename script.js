@@ -1,8 +1,8 @@
-let main=document.querySelector("section");
-let projects=[
-    {
-        projectLink:"CodeAlpha_Project-IMAGE-GALLERY/gallery.html", projrctName:"Image Gallery",  code:"https://github.com/kaniz-naqvi/Internship/tree/main/CodeAlpha_Project-IMAGE-GALLERY",
-         projectDetails:`<p>
+let main = document.querySelector("section");
+let projects = [
+  {
+    projectLink: "CodeAlpha_Project-IMAGE-GALLERY/gallery.html", projrctName: "Image Gallery", code: "https://github.com/kaniz-naqvi/Internship/tree/main/CodeAlpha_Project-IMAGE-GALLERY",
+    projectDetails: `<p>
         The <strong>Nature Lovers Image Gallery</strong> is a visually immersive gallery that showcases the beauty of nature through three main categories: 
         <strong>Flowers</strong>, <strong>Forests</strong>, and <strong>The Sky</strong>. The gallery provides an interactive user experience, where users can explore a collection of stunning images.
       </p>
@@ -24,11 +24,11 @@ let projects=[
       <h3>Usage:</h3>
       <p>
         Users can explore the gallery by navigating through different categories: Flowers, Forests, and Sky. Each category includes a main image that can be changed by clicking on thumbnails, and all images can be viewed in fullscreen mode. The responsive design ensures that the gallery works seamlessly across all devices.
-      </p>`, 
-    },
-    {
-        projectLink:"CodeAlpha-project-Calculator/cal.html", projrctName:"Calculator Web Application",  code:"https://github.com/kaniz-naqvi/Internship/tree/main/CodeAlpha-project-Calculator",
-         projectDetails:`<p>
+      </p>`,
+  },
+  {
+    projectLink: "CodeAlpha-project-Calculator/cal.html", projrctName: "Calculator Web Application", code: "https://github.com/kaniz-naqvi/Internship/tree/main/CodeAlpha-project-Calculator",
+    projectDetails: `<p>
         The <strong>Calculator</strong> web application is a responsive and interactive tool designed for performing basic arithmetic operations. Built with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, it features a user-friendly interface and dynamic functionality.
     </p>
 
@@ -43,11 +43,29 @@ let projects=[
     <h2>Usage:</h2>
     <p>
         Users can perform basic arithmetic calculations with real-time input display and smooth error management. The application combines modern design with functionality, making it a versatile tool for everyday calculations.
-    </p>`, 
-    },
+    </p>`,
+  },
+  {
+    projectLink: "CodeAlpha_Project_portfolio/portfolio.html", projrctName: "My Portfolio Website", code: "https://github.com/kaniz-naqvi/Internship/tree/main/CodeAlpha_Project_portfolio/",
+    projectDetails: ` <p>
+                        The <strong>Portfolio Website</strong> serves as a professional online presence where I showcase my skills, projects, and achievements. Built with <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>Bootstrap</strong>, this portfolio represents my journey as a developer and includes a detailed collection of my work during the internship at <strong><a href="https://www.linkedin.com/company/codealpha/" target="_blank">codeAlpha</a></strong>.
+                    </p>
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li><strong>Responsive Design</strong>: The website is fully responsive, ensuring a seamless experience across desktops, tablets, and mobile devices.</li>
+                        <li><strong>Project Display</strong>: Each project includes detailed information, such as project names, live links, code repositories, and descriptions of the functionality and key features.</li>
+                        <li><strong>Navigation</strong>: Clear and intuitive navigation to access the blog, about me section, and my social media links.</li>
+                        <li><strong>Interactive Elements</strong>: Hover effects and smooth scrolling for a modern user experience.</li>
+                        <li><strong>Social Links</strong>: Direct access to my LinkedIn and GitHub profiles, allowing visitors to explore my professional network and repositories.</li>
+                    </ul>
+                    <h3>Usage:</h3>
+                    <p>
+                        Visitors can explore my portfolio to learn more about my skills, the projects I have worked on, and the technologies I have used. The website also includes a link to my blog, where I share insights about my learning process and the challenges I face while growing as a web developer.
+                    </p>`,
+  },
 ]
 projects.forEach(project => {
-    main.innerHTML+=`<div>
+  main.innerHTML += `<div>
             <ol>
                 <h2>${project.projrctName}</h2>
                 <ul>
