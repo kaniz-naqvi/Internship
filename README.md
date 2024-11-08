@@ -72,7 +72,6 @@
   <li>See it in action <a href="https://kaniz-naqvi.github.io/Internship/CodeAlpha-project-Calculator/cal.html" target="_blank">here</a></li>
 </ul>
 <div>
-    <ol>
         <h2>My Portfolio Website</h2>
         <ul>
             <li>
@@ -97,6 +96,5 @@
             </li>
             <li>See it in action<a href="portfolio_link_here" target="_blank"> here.</a></li>
         </ul>
-    </ol>
 </div>
 
