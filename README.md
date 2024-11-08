@@ -95,8 +95,7 @@
                     </p>
                 </details>
             </li>
-            <li><a href="portfolio_link_here" target="_blank">Live preview</a></li>
-            <li><a href="https://github.com/kaniz-naqvi/portfolio-repo-link" target="_blank">Go to Code</a></li>
+            <li>See it in action<a href="portfolio_link_here" target="_blank"> here.</a></li>
         </ul>
     </ol>
 </div>
