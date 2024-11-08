@@ -26,7 +26,7 @@ let projectCards = "";
 projects.forEach(project => {
     projectCards += `
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card bg-dark glow text-light h-100">
+          <div class="card bg-dark glow text-light h-100 project-card">
             <img src="image/${project.img}" class="card-img-top card-img-fixed" alt="${project.alt}" />
             <div class="card-body">
               <h5 class="card-title">${project.title}</h5>
